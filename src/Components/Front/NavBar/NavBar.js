@@ -4,24 +4,22 @@ import "./NavBar.css";
 
 const NavBar = () => {
   return (
-    <Navbar className="nav-wrapper">
+    <Navbar bg="dark" className="nav-wrapper">
       <Container>
         <Navbar.Brand href="/">
           <img
             src="/3.png"
             height="50"
             className="d-inline-block align-top"
-            alt="React Bootstrap logo"
+            alt="Get N Pay Logo"
           />
         </Navbar.Brand>
+        <Breadcrumb className="bread-wrap">
+          <Breadcrumb.Item href="inventory">for admin</Breadcrumb.Item>
+          <Breadcrumb.Item href="/">Cart</Breadcrumb.Item>
+          <Breadcrumb.Item href="checkout">Fave </Breadcrumb.Item>
+        </Breadcrumb>
       </Container>
-      <Breadcrumb>
-        <Breadcrumb.Item href="addproduct">Home</Breadcrumb.Item>
-        {/* <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
-          Library
-        </Breadcrumb.Item>
-        <Breadcrumb.Item>Data</Breadcrumb.Item> */}
-      </Breadcrumb>
     </Navbar>
   );
 };

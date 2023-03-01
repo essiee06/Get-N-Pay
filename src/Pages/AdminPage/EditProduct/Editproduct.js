@@ -6,7 +6,6 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import axios from "axios";
 import Dashboard from "../Dashboard/Dashboard";
-import "./AddProduct.css";
 
 function HorizontalExample() {
   const [inputs, setInputs] = useState({});
@@ -27,7 +26,7 @@ function HorizontalExample() {
     <Container>
       <Dashboard />
       <Container className="wrapper">
-        <h1> Add Product</h1>
+        <h1> Edit Product</h1>
         <Form onSubmit={handleSubmit}>
           <Form.Group
             as={Row}
@@ -79,7 +78,7 @@ function HorizontalExample() {
           </Form.Group>
           <Form.Group as={Row} className="mb-3">
             <Col sm={{ span: 10, offset: 3 }}>
-              <Button type="submit">Submit</Button>
+              <Button type="submit">Update</Button>
             </Col>
           </Form.Group>
         </Form>
