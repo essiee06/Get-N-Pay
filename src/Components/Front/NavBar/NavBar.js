@@ -15,9 +15,9 @@ const NavBar = () => {
           />
         </Navbar.Brand>
         <Breadcrumb className="bread-wrap">
-          <Breadcrumb.Item href="inventory">for admin</Breadcrumb.Item>
+          <Breadcrumb.Item href="/inventory">for admin</Breadcrumb.Item>
           <Breadcrumb.Item href="/">Cart</Breadcrumb.Item>
-          <Breadcrumb.Item href="checkout">Fave </Breadcrumb.Item>
+          <Breadcrumb.Item href="/addtocart">Fave </Breadcrumb.Item>
         </Breadcrumb>
       </Container>
     </Navbar>

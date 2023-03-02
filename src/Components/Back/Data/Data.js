@@ -1,5 +1,5 @@
 const data = {
-  productItems: [
+  products: [
     {
       id: "1",
       name: "kape",
