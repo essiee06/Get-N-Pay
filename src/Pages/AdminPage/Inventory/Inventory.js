@@ -1,8 +1,6 @@
 import React from "react";
 import { Container, Table } from "react-bootstrap";
 import Dashboard from "../Dashboard/Dashboard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPen } from "@fortawesome/free-solid-svg-icons";
 
 const Inventory = () => {
   return (
