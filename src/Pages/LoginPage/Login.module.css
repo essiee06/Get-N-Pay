@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body {
+  background: url("../../../public/6.jpg") no-repeat center center/cover;
+  width: 100vw;
+  height: 100vh;
+  font-family: poppins;
+  font-size: 1rem;
+  overflow: hidden;
+}
+.Wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.logo {
+  background: url("../../../public/2.png") no-repeat center center/cover;
+  display: flex;
+  width: 150px;
+  height: 150px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Welcome_Message {
+  margin-top: 20px;
+  font-family: "Outfit";
+  font-weight: 500px;
+  font-size: 60px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup {
+  display: none;
+}
+
+.signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 666px;
+  position: fixed;
+}
+.signupcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+#toggle:checked ~ .signin {
+  display: none;
+}
+
+#toggle:checked ~ .signup {
+  display: block;
+}
+
+@keyframes animateForm {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#toggle {
+  appearance: none;
+}
+
+.togglePassword {
+  position: absolute;
+  top: 25%;
+  right: 33%;
+}
+
+.togglePassword:hover {
+  color: #eb1d36;
+  cursor: pointer;
+}
+.row {
+  margin-bottom: 50px;
+}
+
+.signin,
+.signup {
+  /* Modal */
+  position: absolute;
+  width: 914px;
+  height: 666px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  background: rgba(0, 0, 0, 0.51);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+}
+.PleaseText {
+  font-size: 20px;
+}
+.please_enter_text {
+  top: 100px !important;
+  align-content: center;
+}
+p {
+  text-align: center;
+  margin: 1rem 0;
+  color: white;
+  font-family: "Outfit";
+  font-style: normal;
+}
+.Email_login {
+  /* Email Text */
+  margin-top: 20px;
+  margin-bottom: 0.5rem;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 16px;
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.Password_login {
+  /* Password Text */
+  margin-top: 20px;
+  margin-bottom: 0.5rem;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 16px;
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginPassword {
+  position: relative;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.Forgot_Password {
+  display: block;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+
+.Forgot_Password:hover {
+  cursor: pointer;
+}
+
+input:not([type="checkbox"]) {
+  /* PasswordBox */
+  width: 15rem;
+  height: 3rem;
+  padding-left: 1%;
+  top: 27rem;
+  margin: 0 auto;
+  color: #000000;
+  background: white;
+  display: block;
+  text-align: left !important;
+  /* align-items: center;
+  justify-content: center; */
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: all 300ms ease;
+}
+
+.loginpasswordtext {
+  /* PasswordBox */
+  width: 15rem;
+  height: 3rem;
+  padding-right: 50px !important;
+  top: 27rem;
+  margin: 0 auto;
+  color: #000000;
+  background: white;
+  display: block;
+  align-items: center;
+  text-align: left !important;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: all 300ms ease;
+}
+.container form input[type="submit"] {
+  background: #ad9b8cea;
+  transition: all 300ms ease;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.container form input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+.create_an_account {
+  font-family: "Outfit";
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.have_no_account {
+  display: block;
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.76);
+  text-align: center;
+}
+
+.have_an_account {
+  display: block;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.76);
+  text-align: center;
+}
+small {
+  font-family: "Outfit";
+  font-style: normal;
+  position: relative;
+}
+
+.submit_btn {
+  /* Sign In Button */
+  display: flex;
+  margin: auto;
+  margin-top: 10px;
+  margin-left: 22.5rem;
+  width: 187px;
+  height: 56px;
+  top: 568px;
+  border-color: #ad9b8cea !important;
+  margin-right: 20px;
+  background: #7aa5f9;
+  mix-blend-mode: normal;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  align-items: center;
+  justify-content: center !important;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: white;
+}
+
+.submit_btn:active {
+  background: #fa9494;
+}
+.container form small label {
+  color: #fa9494;
+  cursor: pointer;
+}
+.container h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  height: 50px; /*height of form*/
+  margin-top: 50px; /*Create an account height*/
+  font-family: "Outfit" !important;
+  font-style: normal;
+  color: #ffff;
+}
+label.signuplabelsleft {
+  align-items: center !important;
+  text-align: center !important;
+  color: #fff;
+  margin-top: 10px;
+  font-family: "Outfit";
+  margin-bottom: 5px;
+  position: relative !important;
+}
+.signupeye1 {
+  position: absolute;
+  top: 189px;
+  left: 170px;
+  transform: translate(-50%, -50%);
+}
+
+.signupeye2 {
+  position: absolute;
+  top: 289px;
+  left: 170px;
+  transform: translate(-50%, -50%);
+}
+.logos {
+  align-content: center !important;
+  justify-content: center !important;
+}
+.getnpaysinguplogo {
+  background: url("../../../public/logo3.png") no-repeat center center/cover !important;
+  /* margin-left: 290px; */
+  width: 330px;
+  height: 90px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center !important;
+}
+.enteryourdetailstxt {
+  font-size: 20px;
+}
+.displaynameDiv,
+.emailDiv,
+.passwordDiv {
+  margin-bottom: 20px;
+}
+.toggleshow {
+  color: rgb(9, 41, 187);
+  font-size: 20px;
+}

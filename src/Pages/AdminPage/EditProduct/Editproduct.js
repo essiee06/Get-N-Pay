@@ -23,7 +23,7 @@ function HorizontalExample() {
     console.log(inputs);
   };
   return (
-    <Container>
+    <div>
       <Dashboard />
       <Container className="wrapper">
         <h1> Edit Product</h1>
@@ -83,7 +83,7 @@ function HorizontalExample() {
           </Form.Group>
         </Form>
       </Container>
-    </Container>
+    </div>
   );
 }
 

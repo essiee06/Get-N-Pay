@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./AddToCart.css";
 // import products from "../../Components/Back/Data/Data";
 import { Card, Container, ListGroup, Tab, Tabs } from "react-bootstrap";
+import NavBar from "../../Components/Front/NavBar/NavBar";
 
 const products = [
   { id: 1, name: "Product 1", price: 10 },
@@ -28,9 +29,10 @@ const AddToCart = () => {
   };
 
   return (
-    <Container>
+    <div>
+      <NavBar />
       <Tabs
-        defaultActiveKey="home"
+        defaultActiveKey="addtocart"
         transition={false}
         id="noanim-tab-example"
         className="mb-3"
@@ -67,7 +69,7 @@ const AddToCart = () => {
           </Card>
         </Tab>
       </Tabs>
-    </Container>
+    </div>
   );
 };
 
