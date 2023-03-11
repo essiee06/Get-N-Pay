@@ -20,12 +20,13 @@ import NavBar from "./Components/Front/NavBar/NavBar";
 const App = () => {
   return (
     <BrowserRouter>
-      {/* <NavBar /> */}
+      <NavBar />
       {/* For Customer Display */}
       {/* <AddToCart /> */}
       {/* for admin display */}
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/shoppingcart" element={<Cart />} />
         <Route path="/adminside" element={<Dashboard />} />

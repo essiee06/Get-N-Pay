@@ -66,19 +66,56 @@ function InventoryManagement() {
       {/* <h2 className={styles.title}>Inventory</h2> */}
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
         <Row>
-          <Col sm={3}>
+          <Col sm={2}>
             <Nav variant="pills" className="flex-column">
               <Nav.Item>
-                <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                <Nav.Link eventKey="first">Inventory</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                <Nav.Link eventKey="second">Add/Edit Product</Nav.Link>
               </Nav.Item>
             </Nav>
           </Col>
           <Col sm={9}>
             <Tab.Content>
               <Tab.Pane eventKey="first">
+                <Table striped="columns">
+                  <thead>
+                    <tr>
+                      <th>RFID Tag UID No.</th>
+                      <th>Product Name</th>
+                      <th>Quantity</th>
+                      <th>Price</th>
+                      <th>Image</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {products.map((product, index) => (
+                      <tr key={index}>
+                        <td>{product.uid}</td>
+                        <td>{product.name}</td>
+                        <td>00</td>
+                        <td>{product.price}</td>
+                        <td>{product.image}</td>
+                        <td>
+                          <Button
+                            href="first"
+                            onClick={() => editProduct(index)}
+                          >
+                            Edit
+                          </Button>
+                        </td>
+                        <td>
+                          <Button onClick={() => deleteProduct(index)}>
+                            Delete
+                          </Button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </Table>
+              </Tab.Pane>
+              <Tab.Pane eventKey="second">
                 <Container fluid className={styles.wrapper}>
                   <div>
                     <label>RFID Tag UID No.:</label>
@@ -123,43 +160,6 @@ function InventoryManagement() {
                     {editing ? "Update Product" : "Add Product"}
                   </Button>
                 </Container>
-              </Tab.Pane>
-              <Tab.Pane eventKey="second">
-                <Table striped="columns">
-                  <thead>
-                    <tr>
-                      <th>RFID Tag UID No.</th>
-                      <th>Product Name</th>
-                      <th>Quantity</th>
-                      <th>Price</th>
-                      <th>Image</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {products.map((product, index) => (
-                      <tr key={index}>
-                        <td>{product.uid}</td>
-                        <td>{product.name}</td>
-                        <td>00</td>
-                        <td>{product.price}</td>
-                        <td>{product.image}</td>
-                        <td>
-                          <Button
-                            href="first"
-                            onClick={() => editProduct(index)}
-                          >
-                            Edit
-                          </Button>
-                        </td>
-                        <td>
-                          <Button onClick={() => deleteProduct(index)}>
-                            Delete
-                          </Button>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </Table>
               </Tab.Pane>
             </Tab.Content>
           </Col>

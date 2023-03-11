@@ -18,16 +18,8 @@ const ShoppingCart = ({ cart, onRemoveFromCart }) => {
         </ListGroup>
         <p>Total Price: ${totalPrice}</p>
       </Card>
-      {/* <ul>
-        {cart.map((product) => (
-          <li key={product.id}>
-            {product.name} - ${product.price}{" "}
-            <button onClick={() => onRemoveFromCart(product)}>Remove</button>
-          </li>
-        ))}
-      </ul> */}
+
       <h3> Total price: {totalPrice}</h3>
-      {/* <p>Total Price: $ {totalPrice.toFixed(2)}</p> */}
     </div>
   );
 };

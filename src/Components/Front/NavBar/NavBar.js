@@ -14,19 +14,13 @@ const NavBar = () => {
             alt="Get N Pay Logo"
           />
         </Navbar.Brand>
+
         <Breadcrumb className="bread-wrap">
-          <Breadcrumb.Item href="/shoppingcart">Shopping Cart</Breadcrumb.Item>
-          <Breadcrumb.Item href="/addtocart">Add to Cart</Breadcrumb.Item>
-          <Breadcrumb.Item href="/cart">
-            cart
-            <i className="fas fa-cart-plus" />{" "}
+          <Breadcrumb.Item href="/inventoryManagement">
+            for admin
           </Breadcrumb.Item>
-        </Breadcrumb>
-        <Breadcrumb className="bread-wrap">
-          <Breadcrumb.Item href="/cart">for admin</Breadcrumb.Item>
-          <Breadcrumb.Item href="/inventoryManagement">Cart</Breadcrumb.Item>
+          <Breadcrumb.Item href="/cart">Cart</Breadcrumb.Item>
           <Breadcrumb.Item href="/addtocart">
-            {" "}
             <i className="fas fa-cart-plus" />{" "}
           </Breadcrumb.Item>
         </Breadcrumb>
