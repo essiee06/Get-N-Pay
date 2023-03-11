@@ -5,6 +5,7 @@ export const Login = (props) => {
   const [name, setName] = useState("");
   const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  //const [address, setAdress] = useState("");
   const [pass, setPass] = useState("");
   const [confpass, setConfPass] = useState("");
   const [phone, setPhone] = useState("");
@@ -15,17 +16,17 @@ export const Login = (props) => {
   };
   return (
     <div className="auth-form-container">
-      <form className="signup-form" onSubmit={handleSubmit}>
+      <form className="signup-form" onSubmit={handleSubmit} id="register-form" method="POST">
         <h2>REGISTRATION</h2>
 
-        <label htmlFor="name">NAME</label>
+        <label htmlFor="firstname">FIRST NAME</label>
         <input
           value={name}
           onChange={(e) => setName(e.target.value)}
-          type="name"
-          placeholder="Name"
-          id="name"
-          name="name"
+          type="firstname"
+          placeholder="First Name"
+          id="firstname"
+          name="firstname"
         />
 
         <label htmlFor="lastname">LAST NAME</label>
@@ -80,11 +81,20 @@ export const Login = (props) => {
 
         <button type="submit">Register</button>
       </form>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="Signup_backend.js"></script>
+
       <button className="link-btn" onClick={() => props.onFormSwitch("login")}>
         Already have an account?<a href="/">Login here.</a>
       </button>
     </div>
   );
+
+ 
+
 };
 
 export default Login;
+
+
