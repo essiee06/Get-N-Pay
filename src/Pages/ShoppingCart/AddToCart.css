@@ -1,0 +1,13 @@
+.productlist {
+  position: absolute;
+  width: 500px;
+  height: 250px;
+  left: 20px;
+  top: 100px;
+}
+.cart {
+  position: absolute;
+  /* width: 500px; */
+  top: 100px;
+  left: 600px;
+}

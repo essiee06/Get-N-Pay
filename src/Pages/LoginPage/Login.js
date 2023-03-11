@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col, Container, Form, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import styles from "./Login.module.css";
 import "@material-design-icons/font";
 import NavBar from "../../Components/Front/NavBar/NavBar";
@@ -121,10 +121,10 @@ function Login() {
                 >
                   Forgot Password?
                 </label>
-                <button className={styles.submit_btn}>
+                <Button href="/shoppingcart" className={styles.submit_btn}>
                   {/* onClick={signIn} */}
-                  <a href="/addtocart">Login</a>
-                </button>
+                  Login
+                </Button>
                 {/* <button onClick={() => setShowLogin(!showLogin)}>
                   {showLogin ? "Need to sign up?" : "Already have an account?"}
                 </button> */}

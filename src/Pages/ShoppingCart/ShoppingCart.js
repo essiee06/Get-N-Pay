@@ -1,46 +1,35 @@
 import React from "react";
-import { Badge, Container, Table } from "react-bootstrap";
-// import items from "./data";
-import "./ShoppingCart.css";
-// import Cart from "./Cart";
+import { Button, Card, ListGroup } from "react-bootstrap";
 
-function ShoppingCart() {
+const ShoppingCart = ({ cart, onRemoveFromCart }) => {
+  const totalPrice = cart.reduce((total, product) => total + product.price, 0);
+
   return (
-    <Container className="wrapper">
-      <h1 className="header">Shopping Cart</h1>
-
-      <Table striped="columns">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Item</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Amount</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td colSpan={2}></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </Table>
-    </Container>
+    <div>
+      <h2>Shopping Cart:</h2>
+      <Card style={{ width: "30rem" }}>
+        <ListGroup variant="flush">
+          {cart.map((product) => (
+            <ListGroup.Item key={product.id}>
+              {product.name} - ${product.price}{" "}
+              <Button onClick={() => onRemoveFromCart(product)}>Remove</Button>
+            </ListGroup.Item>
+          ))}
+        </ListGroup>
+        <p>Total Price: ${totalPrice}</p>
+      </Card>
+      {/* <ul>
+        {cart.map((product) => (
+          <li key={product.id}>
+            {product.name} - ${product.price}{" "}
+            <button onClick={() => onRemoveFromCart(product)}>Remove</button>
+          </li>
+        ))}
+      </ul> */}
+      <h3> Total price: {totalPrice}</h3>
+      {/* <p>Total Price: $ {totalPrice.toFixed(2)}</p> */}
+    </div>
   );
-}
+};
 
 export default ShoppingCart;

@@ -11,7 +11,10 @@ import Dashboard from "./Pages/AdminPage/Dashboard/Dashboard";
 import Inventory from "./Pages/AdminPage/Inventory/Inventory";
 import Login from "./Pages/LoginPage/Login";
 import Signup from "./Pages/LoginPage/Signup";
-// import NavBar from "./Components/Front/NavBar/NavBar";
+import InventoryManagement from "./Pages/AdminPage/InventoryManagement/InventoryManagement";
+import AddEdit from "./Pages/AdminPage/AddEdit/AddEdit";
+import Cart from "./Pages/ShoppingCart/Cart";
+import NavBar from "./Components/Front/NavBar/NavBar";
 // import Routers from "./Components/Front/Routes/Routers";
 
 const App = () => {
@@ -23,13 +26,14 @@ const App = () => {
       {/* for admin display */}
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/shoppingcart" element={<ShoppingCart />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/shoppingcart" element={<Cart />} />
         <Route path="/adminside" element={<Dashboard />} />
         <Route path="/addtocart" element={<AddToCart />} />
         <Route path="/addproduct" element={<AddProduct />} />
         <Route path="/editproduct" element={<Editproduct />} />
-        <Route path="/inventory" element={<Inventory />} />
+        <Route path="/inventory" element={<AddEdit />} />
+        <Route path="/inventoryManagement" element={<InventoryManagement />} />
       </Routes>
     </BrowserRouter>
   );

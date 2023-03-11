@@ -15,9 +15,20 @@ const NavBar = () => {
           />
         </Navbar.Brand>
         <Breadcrumb className="bread-wrap">
-          <Breadcrumb.Item href="/inventory">for admin</Breadcrumb.Item>
-          <Breadcrumb.Item href="/">Cart</Breadcrumb.Item>
-          <Breadcrumb.Item href="/addtocart">Fave </Breadcrumb.Item>
+          <Breadcrumb.Item href="/shoppingcart">Shopping Cart</Breadcrumb.Item>
+          <Breadcrumb.Item href="/addtocart">Add to Cart</Breadcrumb.Item>
+          <Breadcrumb.Item href="/cart">
+            cart
+            <i className="fas fa-cart-plus" />{" "}
+          </Breadcrumb.Item>
+        </Breadcrumb>
+        <Breadcrumb className="bread-wrap">
+          <Breadcrumb.Item href="/cart">for admin</Breadcrumb.Item>
+          <Breadcrumb.Item href="/inventoryManagement">Cart</Breadcrumb.Item>
+          <Breadcrumb.Item href="/addtocart">
+            {" "}
+            <i className="fas fa-cart-plus" />{" "}
+          </Breadcrumb.Item>
         </Breadcrumb>
       </Container>
     </Navbar>
