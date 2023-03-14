@@ -79,9 +79,14 @@ const Cart = () => {
               </Col>
             </Row>
           </ListGroup.Item>
-          <div className="row btn-toolbar">
-            <h2>Total Price:</h2>
-          </div>
+          <Row>
+            <Col sm={8}>
+              <label className={styles.totalPrice}>Total Price:</label>
+            </Col>
+            <Col sm={4}>
+              <label className={styles.totalAmount}>₱33</label>
+            </Col>
+          </Row>
           <hr />
         </ListGroup>
       </Card>
