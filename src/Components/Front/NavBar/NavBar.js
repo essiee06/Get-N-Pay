@@ -1,30 +1,23 @@
 import React from "react";
 import { Breadcrumb, Container, Navbar } from "react-bootstrap";
-import "./NavBar.css";
+// import "./NavBar.css";
+import styles from "./NavBar.module.css";
+import Avatar from "@mui/material/Avatar";
 
 const NavBar = () => {
   return (
-    <Navbar bg="dark" className="nav-wrapper">
-      <Container>
-        <Navbar.Brand href="/">
-          <img
-            src="/3.png"
-            height="50"
-            className="d-inline-block align-top"
-            alt="Get N Pay Logo"
-          />
-        </Navbar.Brand>
+    <Navbar fixed="top" className={styles.NavBarWrapper}>
+      <Navbar.Brand href="/cart" className={styles.logowrapper}>
+        <img className={styles.logo} alt="logo" href="/home" src="/logo3.png" />
+      </Navbar.Brand>
+      <Container fluid></Container>
 
-        <Breadcrumb className="bread-wrap">
-          <Breadcrumb.Item href="/inventoryManagement">
-            for admin
-          </Breadcrumb.Item>
-          <Breadcrumb.Item href="/cart">Cart</Breadcrumb.Item>
-          <Breadcrumb.Item href="/addtocart">
-            <i className="fas fa-cart-plus" />{" "}
-          </Breadcrumb.Item>
-        </Breadcrumb>
-      </Container>
+      <Navbar.Brand className={styles.displayName}>
+        Welcome, User Name!
+        <div className={styles.profile} alt="">
+          <Avatar src="/profile.jpg" sx={{ width: 80, height: 80 }} />
+        </div>
+      </Navbar.Brand>
     </Navbar>
   );
 };

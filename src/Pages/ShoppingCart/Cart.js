@@ -1,48 +1,89 @@
-import React, { useState } from "react";
-import products from "./data";
-import AddToCart from "./AddToCart";
-import ShoppingCart from "./ShoppingCart";
-import { Card, ListGroup } from "react-bootstrap";
-import "./AddToCart.css";
+import React from "react";
+import { Button, Card, Col, ListGroup, Row } from "react-bootstrap";
+import styles from "./AddToCart.module.css";
+import NavBar from "../../Components/Front/NavBar/NavBar";
 
 const Cart = () => {
-  const [cart, setCart] = useState([]);
-  const [totalPrice, setTotalPrice] = useState(0);
-
-  const addToCart = (product) => {
-    const newCart = [...cart, product];
-    setCart(newCart);
-    setTotalPrice(totalPrice + product.price);
-  };
-
-  const removeFromCart = (product) => {
-    const index = cart.findIndex((p) => p.id === product.id);
-    const newCart = [...cart];
-    newCart.splice(index, 1);
-    setCart(newCart);
-    setTotalPrice(totalPrice - product.price);
-  };
-
   return (
     <div>
-      <Card style={{ width: "30rem" }} className="productlist">
-        <h2>Products:</h2>
-        <ListGroup variant="flush">
-          {products.map((product) => (
-            <AddToCart
-              key={product.id}
-              product={product}
-              onAddToCart={addToCart}
-            />
-          ))}
+      <NavBar />
+      <Card style={{ width: "50rem" }} className={styles.productlist}>
+        <h2>Cart:</h2>
+        <ListGroup as="ol" className={styles.WrapperList}>
+          <ListGroup.Item className={styles.WrapperlistItems} as="li">
+            <Row className="align-items-center">
+              <Col xs="auto" className={styles.itemsDetails}>
+                <img
+                  className={styles.productImage}
+                  src="./pics/busog_lusog.png"
+                  alt="products"
+                />
+              </Col>
+              <Col xs="auto" className={styles.itemsDetails}>
+                <label className={styles.itemsDet}>Busog Lusog</label>
+                <p className={styles.price}>₱10.00</p>
+              </Col>
+              <Col xs="auto" className={styles.itemsDetails}>
+                <Button variant="light">+</Button>
+                <label className={styles.quantity}>1</label>
+                <Button variant="light">-</Button>
+              </Col>
+              <Col xs="auto" className={styles.itemsDetails}>
+                <label className={styles.amount}>₱10.00</label>
+              </Col>
+            </Row>
+          </ListGroup.Item>
+          <ListGroup.Item className={styles.WrapperlistItems} as="li">
+            <Row className="align-items-center">
+              <Col xs="auto" className={styles.itemsDetails}>
+                <img
+                  className={styles.productImage}
+                  src="./pics/magic_sarap.png"
+                  alt="products"
+                />
+              </Col>
+              <Col xs="auto" className={styles.itemsDetails}>
+                <label className={styles.itemsDet}>Magic Sarap</label>
+                <p className={styles.price}>₱5.00</p>
+              </Col>
+              <Col xs="auto" className={styles.itemsDetails}>
+                <Button variant="light">+</Button>
+                <label className={styles.quantity}>3</label>
+                <Button variant="light">-</Button>
+              </Col>
+              <Col xs="auto" className={styles.itemsDetails}>
+                <label className={styles.amount}>₱15.00</label>
+              </Col>
+            </Row>
+          </ListGroup.Item>
+          <ListGroup.Item className={styles.WrapperlistItems} as="li">
+            <Row className="align-items-center">
+              <Col xs="auto" className={styles.itemsDetails}>
+                <img
+                  className={styles.productImage}
+                  src="./pics/biskwir.png"
+                  alt="products"
+                />
+              </Col>
+              <Col xs="auto" className={styles.itemsDetails}>
+                <label className={styles.itemsDet}> Rebisco Cre...</label>
+                <p className={styles.price}>₱8.00</p>
+              </Col>
+              <Col xs="auto" className={styles.itemsDetails}>
+                <Button variant="light">+</Button>
+                <label className={styles.quantity}>1</label>
+                <Button variant="light">-</Button>
+              </Col>
+              <Col xs="auto" className={styles.itemsDetails}>
+                <label className={styles.amount}>₱8.00</label>
+              </Col>
+            </Row>
+          </ListGroup.Item>
+          <div className="row btn-toolbar">
+            <h2>Total Price:</h2>
+          </div>
+          <hr />
         </ListGroup>
-      </Card>
-      <Card className="cart">
-        <ShoppingCart
-          cart={cart}
-          onRemoveFromCart={removeFromCart}
-          totalPrice={totalPrice}
-        />
       </Card>
     </div>
   );

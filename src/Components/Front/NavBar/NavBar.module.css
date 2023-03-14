@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+
+.logo {
+  /* position: absolute; */
+  width: 261px;
+  height: 78px;
+  left: 8px;
+  top: 20px;
+  overflow: auto;
+}
+.logowrapper {
+  display: flex;
+  left: 20px;
+
+  /* width: 50px;
+  height: 110px;
+  left: 11px;
+  top: 20px; */
+}
+.NavBarWrapper {
+  /* height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  top: 0;
+  z-index: 999; */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  left: 0px;
+  top: 0px;
+
+  background: #7aa5f9;
+}
+.SearchbarWrapper {
+  position: absolute;
+  padding: 50px;
+  background-color: aliceblue;
+  left: 20% !important;
+}
+
+/* .searchbar {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+/* .searchWrapper {
+  position: static !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+} */
+
+.displayName {
+  position: absolute;
+  width: 362px;
+  height: 63px;
+  left: 1050px;
+  top: 20px;
+
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400 !important;
+  font-size: 30px !important;
+  line-height: 40px;
+  text-align: center;
+
+  color: #f0eded;
+}
+.profile {
+  display: flex;
+  width: 80px;
+  height: 80x;
+  bottom: 120%;
+  margin-top: 3px;
+  left: 100%;
+  position: relative;
+  border-radius: 20px;
+  align-items: left;
+}

@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.productlist {
+  position: absolute;
+  align-items: center;
+  display: flex;
+  margin-top: 150px;
+  margin-left: 50px;
+  left: 350px;
+  background: rgba(254, 255, 223, 0.9);
+  mix-blend-mode: normal;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.cart {
+  position: absolute;
+  /* width: 500px; */
+  top: 100px;
+  left: 600px;
+}
+.WrapperList {
+  width: 90%;
+}
+.productImage {
+  display: flex;
+  width: 102px;
+  height: 95px;
+  margin: 10px;
+  /* left: 12px;
+  top: 211px; */
+}
+.listItems {
+  background-color: blanchedalmond;
+}
+.WrapperlistItems {
+  background-color: bisque;
+  width: 100%;
+}
+.itemsDetails {
+  justify-content: space-around;
+  margin: 10px;
+}
+.quantity {
+  padding: 0 10px 5px 10px;
+  margin: 0 5px 0 5px;
+  background: rgba(0, 0, 0, 0.25);
+}
+/* label .itemsDetails {
+  margin-right: 10px;
+} */
+p.price {
+  font-family: "Outfit";
+  color: black;
+  margin-top: 5px;
+  font-weight: 500;
+  font-size: 20px;
+}
+label.itemsDet {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 16px;
+  color: black;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+label.amount {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 16px;
+  color: black;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
