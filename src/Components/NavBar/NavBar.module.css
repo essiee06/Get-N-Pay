@@ -8,6 +8,11 @@
   top: 20px;
   overflow: auto;
 }
+.navwrapper {
+  width: 100%;
+}
+.shopcart {
+}
 .logowrapper {
   display: flex;
   left: 20px;
@@ -33,35 +38,24 @@
 
   background: #7aa5f9;
 }
-.SearchbarWrapper {
+.shopcart {
   position: absolute;
-  padding: 50px;
-  background-color: aliceblue;
-  left: 20% !important;
+  display: flex;
+  left: 60%;
 }
 
-/* .searchbar {
-  position: static;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-} */
-/* .searchWrapper {
-  position: static !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-} */
-
+.material-symbols-outlined {
+  position: relative;
+  font-size: 30px;
+  padding-inline: 50px;
+  font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 200, "opsz" 48;
+}
 .displayName {
   position: absolute;
-  width: 362px;
+  width: 30%;
   height: 63px;
-  left: 1050px;
-  top: 20px;
-
+  left: 60%;
+  top: 22%;
   font-family: "Outfit";
   font-style: normal;
   font-weight: 400 !important;
@@ -74,7 +68,7 @@
 .profile {
   display: flex;
   width: 80px;
-  height: 80x;
+  height: 80px;
   bottom: 120%;
   margin-top: 3px;
   left: 100%;

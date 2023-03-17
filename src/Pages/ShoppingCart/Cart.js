@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Card, Col, ListGroup, Row } from "react-bootstrap";
+import NavBar from "../../Components/NavBar/NavBar";
 import styles from "./AddToCart.module.css";
-import NavBar from "../../Components/Front/NavBar/NavBar";
 
 const Cart = () => {
   return (

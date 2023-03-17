@@ -5,7 +5,6 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import axios from "axios";
-import Dashboard from "../Dashboard/Dashboard";
 
 function HorizontalExample() {
   const [inputs, setInputs] = useState({});
@@ -24,7 +23,6 @@ function HorizontalExample() {
   };
   return (
     <div>
-      <Dashboard />
       <Container className="wrapper">
         <h1> Edit Product</h1>
         <Form onSubmit={handleSubmit}>
