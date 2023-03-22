@@ -1,17 +1,24 @@
 import React from "react";
-import { Container, Table } from "react-bootstrap";
+import { Button, Container, Table } from "react-bootstrap";
 import NavBar from "../../../Components/NavBar/NavBar";
 import styles from "./InventoryManagement.module.css";
 import "@material-design-icons/font";
+import NavBarAdmin from "../../../Components/NavBarAdmin/NavBarAdmin";
+// import "./InventoryManagement.css";
 
 const InventoryManagement = () => {
   return (
     <div>
-      <NavBar />
-      <Container fluid className={styles.wrapper}>
+      <NavBarAdmin />
+      <Container fluid className={styles["body-wrapper"]}>
         <div className={styles.inventoryTxt}>Inventory</div>
         <div className={styles.addProdTxt}>
-          <span class="material-symbols-outlined">add</span> ADD PRODUCT
+          <button href="/addproduct">
+            <a className={styles.icon} href="/addproduct">
+              <span class="material-symbols-outlined">add</span>
+              ADD PRODUCT
+            </a>
+          </button>
         </div>
         <Container fluid className={styles.tableWrap}>
           <Table className={styles.table} striped>
@@ -28,10 +35,14 @@ const InventoryManagement = () => {
             <tbody>
               <tr xs="auto">
                 <td>
-                  <span class="material-symbols-outlined">edit</span>
+                  <button class="material-symbols-outlined">
+                    <a href="/editproduct" className={styles.icon}>
+                      edit
+                    </a>
+                  </button>
                 </td>
                 <td>
-                  <span class="material-symbols-outlined">delete</span>
+                  <button class="material-symbols-outlined">delete</button>
                 </td>
                 <td>123</td>
                 <td>Busog Lusog</td>

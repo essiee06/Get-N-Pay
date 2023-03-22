@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  background: url("../../../public/6.jpg") no-repeat center center/cover;
+  width: 100vw;
+  height: 100vh;
+  font-family: poppins;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.forgotpass {
+  /* Modal */
+  position: absolute;
+  width: 746px;
+  height: 508px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  background: rgba(5, 30, 68, 0.51);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+}
+/* 
+.logobook {
+  background: url("logo.png") no-repeat center center/cover;
+  float: left;
+  width: 61px;
+  height: 66.45px;
+  left: 509px;
+  top: 77px;
+  margin-top: 50px;
+  margin-left: 27.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.booklove {
+  background: url("../../../public/logo3.png") no-repeat center center/cover;
+  width: 268px;
+  height: 61px;
+  left: 570px;
+  top: 178px;
+  margin-top: 50px;
+  margin-left: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backArow {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 22px;
+  top: 22px;
+  color: #ffff;
+}
+
+.resetpass_title {
+  /* align-items: center;
+  align-content: center;
+  margin-top: 30px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 16px;
+  color: white; */
+
+  margin-top: 20px;
+  margin-bottom: 0.5rem;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 16px;
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.please_enter_text {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  height: 81px;
+  left: 482px;
+
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #e2e5f1;
+
+  backdrop-filter: blur(2px);
+}
+.Email_login {
+  /* Email Text */
+  margin-top: 20px;
+  margin-bottom: 0.5rem;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 16px;
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.change_pass {
+  /* Sign In Button */
+  position: block;
+  margin: auto;
+  margin-top: 3rem;
+  margin-left: 17.5rem;
+  width: 187px;
+  height: 56px;
+  left: 590px;
+  top: 568px;
+  border-color: #ad9b8cea;
+  padding: 14px 40px;
+
+  background: #50cbf2;
+  mix-blend-mode: normal;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: white;
+}
+input.loginEmail {
+  align-items: center;
+  text-align: center !important;
+  color: #1b1515;
+  margin-top: 10px;
+  font-family: "Outfit";
+  margin-bottom: 5px;
+}

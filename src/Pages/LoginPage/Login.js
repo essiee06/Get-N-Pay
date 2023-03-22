@@ -36,9 +36,11 @@ const Login = () => {
           <div class={styles.have_an_account}>
             <p>
               Don't have an account?
-              <a href="/signup"> Sign up</a>{" "}
+              <a href="/signup"> Sign up</a>
             </p>
-            <p>Forgot Password?</p>
+            <p>
+              <a href="/forgotpassword">Forgot Password?</a>
+            </p>
           </div>
         </Container>
       </Container>

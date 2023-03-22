@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  position: absolute;
+  display: flex;
+  width: 1117px;
+  height: 567px;
+  left: 10%;
+  top: 20%;
+
+  /* Paper Background */
+
+  background: #adc7e1;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+p.updateTxt {
+  position: absolute;
+  width: 338px;
+  height: 58px;
+  left: 390px;
+  /* top: 30px; */
+
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 50px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* Grey-Very Dark */
+
+  color: #122e40;
+}
+.formWrapper {
+  position: absolute;
+  top: 20%;
+  /* top: 148px; */
+}
+Form.form_group {
+  /* position: absolute; */
+  width: 367px !important;
+  height: 50px !important;
+  /* left: 538px;
+  top: 148px; */
+
+  /* Gray 5 */
+
+  background: #e0e0e0 !important;
+  border-radius: 10px;
+}
+a.icon {
+  position: absolute;
+  color: black;
+  top: 50px;
+  left: 20px;
+}
+.add_button {
+  /* Rectangle 5 */
+
+  position: absolute;
+  width: 315px;
+  height: 50px;
+  left: 777px;
+  top: 493px;
+
+  /* Primary */
+
+  background: #4796bd;
+  box-shadow: 0px 5px 65px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+}
+/* .back_arrow {
+  position: absolute;
+  top: 10%;
+
+} */
+.items_txt {
+  /* Product */
+  position: relative;
+  font-family: "Outfit";
+  font-weight: 700;
+  font-size: 22px;
+  left: 20%;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  /* Grey-Dark */
+
+  color: #495d69;
+}
+.rfid_num {
+  position: absolute;
+  /* width: 113px;
+  height: 38px;
+  left: 215px;
+  top: 148px; */
+  top: 10%;
+  margin: 5px;
+  left: 15%;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 38px;
+  /* display: flex;
+  align-items: flex-end;
+  text-align: center; */
+
+  /* Grey-Dark */
+
+  color: #495d69;
+}
+.form_input {
+  position: relative;
+  width: 367px;
+  /* left: 538px;
+  top: 148px; */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* Gray 5 */
+  left: 35%;
+  background: #f5f4f4;
+  border-radius: 10px;
+}
+.back_arrow {
+  position: absolute;
+  top: 10%;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 200, "opsz" 48;
+}
