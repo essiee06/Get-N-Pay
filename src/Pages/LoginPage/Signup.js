@@ -98,9 +98,9 @@ const Signup = () => {
               <Button className={styles.submit_btn} type="submit">
                 Register
               </Button>
-              <button className="link-btn">
+              <p>
                 Already have an account?<a href="/">Login here.</a>
-              </button>
+              </p>
             </form>
           </div>
         </Container>

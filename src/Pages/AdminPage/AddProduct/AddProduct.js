@@ -1,89 +1,71 @@
-import { useState } from "react";
-import { Container } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
-import Row from "react-bootstrap/Row";
-import axios from "axios";
-import "./AddProduct.css";
+import React from "react";
+import { Button, Container, Form } from "react-bootstrap";
+import NavBarAdmin from "../../../Components/NavBarAdmin/NavBarAdmin";
+import styles from "./AddProduct.module.css";
 
-function HorizontalExample() {
-  const [inputs, setInputs] = useState({});
-
-  const handleChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setInputs((values) => ({ ...values, [name]: value }));
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    axios.post("http://localhost:8888/api");
-    console.log(inputs);
-  };
+const AddProduct = () => {
   return (
-    <div>
-      <Container className="wrapper">
-        <h1> Add Product</h1>
-        <Form onSubmit={handleSubmit}>
-          <Form.Group
-            as={Row}
-            className="mb-3"
-            controlId="formHorizontalPassword"
-          >
-            <Form.Label column sm={2}>
-              RFID Tag No.
-            </Form.Label>
-            <Col sm={10}>
-              <Form.Control
-                type="text"
-                name="rfidtag"
-                placeholder="RFID Tag No."
-                onChange={handleChange}
-              />
-            </Col>
-          </Form.Group>
-          <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-            <Form.Label column sm={2}>
-              Item
-            </Form.Label>
-            <Col sm={10}>
-              <Form.Control
-                type="text"
-                name="item"
-                placeholder="Item"
-                onChange={handleChange}
-              />
-            </Col>
-          </Form.Group>
-
-          <Form.Group
-            as={Row}
-            className="mb-3"
-            controlId="formHorizontalPassword"
-          >
-            <Form.Label column sm={2}>
-              Price
-            </Form.Label>
-            <Col sm={10}>
-              <Form.Control
-                type="text"
-                name="price"
-                placeholder="Price"
-                onChange={handleChange}
-              />
-            </Col>
-          </Form.Group>
-          <Form.Group as={Row} className="mb-3">
-            <Col sm={{ span: 10, offset: 3 }}>
-              <Button type="submit">Submit</Button>
-            </Col>
-          </Form.Group>
-        </Form>
+    <Container fluid>
+      <NavBarAdmin />
+      <Container className={styles.back_arrow}>
+        <a href="/admin/inventory" className={styles.icon}>
+          <span class="material-symbols-outlined">arrow_back</span>
+        </a>
       </Container>
-    </div>
+      <div className={styles.wrapper}>
+        <Container className={styles.head1}>
+          <p className={styles.updateTxt}>Add Product</p>
+          <Container className={styles.formWrapper}>
+            {/* <Row>
+              <Col className="ProductCol">
+                <h2>Product</h2>
+              </Col>
+              <Col className="Format"> */}
+            <Form>
+              <Form.Group>
+                <Form.Label className={styles.items_txt}>
+                  Product Name:
+                </Form.Label>
+                <Form.Control
+                  className={styles.form_input}
+                  type="text"
+                  placeholder="e.g Busog Lusog"
+                />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label className={styles.items_txt}>
+                  RFID Tag UID no.:
+                </Form.Label>
+                <Form.Control
+                  className={styles.form_input}
+                  type="number"
+                  placeholder="e.g. 1234"
+                />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label className={styles.items_txt}>Price:</Form.Label>
+                <Form.Control
+                  className={styles.form_input}
+                  placeholder="e.g ₱5.00"
+                />
+              </Form.Group>
+              <Form.Group controlId="formFile">
+                <Form.Label className={styles.items_txt}>
+                  Upload Image:
+                </Form.Label>
+                <Form.Control className={styles.form_input} type="file" />
+              </Form.Group>
+            </Form>
+            {/* </Col>
+            </Row> */}
+          </Container>
+          <Button className={styles.add_button} type="submit">
+            Add
+          </Button>
+        </Container>
+      </div>
+    </Container>
   );
-}
+};
 
-export default HorizontalExample;
+export default AddProduct;

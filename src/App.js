@@ -11,6 +11,7 @@ import InventoryManagement from "./Pages/AdminPage/InventoryManagement/Inventory
 import AddEdit from "./Pages/AdminPage/AddEdit/AddEdit";
 import Cart from "./Pages/ShoppingCart/Cart";
 import LoginAdmin from "./Pages/AdminPage/LoginAdmin/LoginAdmin";
+import ForgotPass from "./Pages/ForgotPass/ForgotPass";
 // import Routers from "./Components/Front/Routes/Routers";
 
 const App = () => {
@@ -29,6 +30,8 @@ const App = () => {
         <Route path="/addproduct" exact element={<AddProduct />} />
         <Route path="/editproduct" exact element={<Editproduct />} />
         <Route path="/inventory" exact element={<AddEdit />} />
+        <Route path="/forgotpassword" exact element={<ForgotPass />} />
+
         <Route
           path="/admin/inventory"
           exact
