@@ -1,31 +1,33 @@
-import { useState } from "react";
+import React from "react";
 import { Container } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
-import axios from "axios";
+import { useState } from "react";
 
-function HorizontalExample() {
-  const [inputs, setInputs] = useState({});
+import { useParams } from "react-router-dom";
+import pb from "../../../lib/pocketbase";
 
-  const handleChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setInputs((values) => ({ ...values, [name]: value }));
-  };
+export async function updateSelected(id, id_no, product_name, price) {
+  const data = {idno: id_no, productname: product_name, price: price}
+  await pb.collection('inventory').update(id, data);
+  window.location.reload();
+};
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+export default function EditProduct() {
+  const [id_no, setRfidtag] = useState("");
+  const [product_name, setItem] = useState("");
+  const [price, setPrice] = useState("");
+  //get id params from url using useParams from react-router-dom
+  const { id } = useParams();
 
-    axios.post("http://localhost:8888/api");
-    console.log(inputs);
-  };
+
   return (
     <div>
       <Container className="wrapper">
         <h1> Edit Product</h1>
-        <Form onSubmit={handleSubmit}>
+        <Form >
           <Form.Group
             as={Row}
             className="mb-3"
@@ -39,7 +41,7 @@ function HorizontalExample() {
                 type="text"
                 name="rfidtag"
                 placeholder="RFID Tag No."
-                onChange={handleChange}
+                onChange={(e) => setRfidtag(e.target.value)}
               />
             </Col>
           </Form.Group>
@@ -52,7 +54,7 @@ function HorizontalExample() {
                 type="text"
                 name="item"
                 placeholder="Item"
-                onChange={handleChange}
+                onChange={(e) => setItem(e.target.value)}
               />
             </Col>
           </Form.Group>
@@ -70,13 +72,13 @@ function HorizontalExample() {
                 type="text"
                 name="price"
                 placeholder="Price"
-                onChange={handleChange}
+                onChange={(e) => setPrice(e.target.value)}
               />
             </Col>
           </Form.Group>
           <Form.Group as={Row} className="mb-3">
             <Col sm={{ span: 10, offset: 3 }}>
-              <Button type="submit">Update</Button>
+              <Button type="submit" onClick={()=>updateSelected(id, id_no, product_name, price )}>Update</Button>
             </Col>
           </Form.Group>
         </Form>
@@ -85,4 +87,3 @@ function HorizontalExample() {
   );
 }
 
-export default HorizontalExample;

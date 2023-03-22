@@ -1,8 +1,33 @@
-import React from "react";
+import React, {useState} from "react";
 import { Button, Container } from "react-bootstrap";
 import styles from "./Login.module.css";
+import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+import pb from "../../lib/pocketbase";
+
+export async function loginUser(email, password) {
+    // Authenticate the user with the email and password
+    const authData = await pb.collection('users').authWithPassword(email, password);
+    return authData;
+}
+
+export default function Login() {
+  //usestate for email and password
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+    const authData = await loginUser(email, password);
+    if (authData) {
+      navigate("/cart");
+    }
+    else{
+      alert("Invalid email or password");
+    }
+};
+
   return (
     <div className={styles.body}>
       <Container className={styles.Wrapper}>
@@ -17,6 +42,7 @@ const Login = () => {
               placeholder="Email Address"
               id="email"
               name="email"
+              onChange={(e) => setEmail(e.target.value)}
             />
             {/* <h2 htmlFor="password" class={styles.Password_login}>
               Password
@@ -28,8 +54,9 @@ const Login = () => {
               placeholder="********"
               id="password"
               name="password"
+              onChange={(e) => setPassword(e.target.value)}
             />
-            <Button type="submit" className={styles.submit_btn} href="/cart">
+            <Button type="submit" className={styles.submit_btn} onClick={handleSubmit}>
               Log In
             </Button>
           </form>
@@ -46,4 +73,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+
