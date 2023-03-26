@@ -8,7 +8,6 @@ import Editproduct from "./Pages/AdminPage/EditProduct/Editproduct";
 import Login from "./Pages/LoginPage/Login";
 import Signup from "./Pages/LoginPage/Signup";
 import InventoryManagement from "./Pages/AdminPage/InventoryManagement/InventoryManagement";
-import AddEdit from "./Pages/AdminPage/AddEdit/AddEdit";
 import Cart from "./Pages/ShoppingCart/Cart";
 import LoginAdmin from "./Pages/AdminPage/LoginAdmin/LoginAdmin";
 import ForgotPass from "./Pages/ForgotPass/ForgotPass";
@@ -29,7 +28,6 @@ const App = () => {
         <Route path="/shoppingcart" exact element={<Cart />} />
         <Route path="/addproduct" exact element={<AddProduct />} />
         <Route path="/editproduct" exact element={<Editproduct />} />
-        <Route path="/inventory" exact element={<AddEdit />} />
         <Route path="/forgotpassword" exact element={<ForgotPass />} />
 
         <Route

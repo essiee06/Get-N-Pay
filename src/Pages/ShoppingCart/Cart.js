@@ -8,10 +8,25 @@ const Cart = () => {
   return (
     <div>
       <NavBar />
-      <Card style={{ width: "50rem" }} className={styles.productlist}>
+      <Card className={styles.productlist}>
         <h2>Cart:</h2>
         <ListGroup as="ol" className={styles.WrapperList}>
           <ListGroup.Item className={styles.WrapperlistItems} as="li">
+            <Row className="align-items-center">
+              <Col xs="auto" className={styles.itemsDetails}>
+                <label> Product Item</label>
+              </Col>
+              <Col xs="auto" className={styles.itemsDetails}>
+                <label>Price</label>
+                {/* <p className={styles.price}>₱10.00</p> */}
+              </Col>
+              <Col xs="auto" className={styles.itemsDetails}>
+                <label className={styles.quantityTxt}>Quantity</label>
+              </Col>
+              <Col xs="auto" className={styles.itemsDetails}>
+                <label className={styles.itemsTxt}>Amount</label>
+              </Col>
+            </Row>
             <Row className="align-items-center">
               <Col xs="auto" className={styles.itemsDetails}>
                 <img
@@ -30,7 +45,7 @@ const Cart = () => {
                 <Button variant="light">-</Button>
               </Col>
               <Col xs="auto" className={styles.itemsDetails}>
-                <label className={styles.amount}>₱10.00</label>
+                <label className={styles.itemsTxt}>₱10.00</label>
               </Col>
             </Row>
           </ListGroup.Item>
