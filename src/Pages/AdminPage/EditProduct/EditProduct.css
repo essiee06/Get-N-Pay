@@ -13,3 +13,7 @@
   margin-right: auto;
   margin-left: auto;
 }
+.col {
+  flex: 1 0;
+  margin: 10px;
+}

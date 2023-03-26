@@ -5,22 +5,19 @@
   box-sizing: border-box;
 }
 .productlist {
-  position: absolute;
+  position: relative;
   align-items: center;
   display: flex;
-  margin-top: 150px;
-  margin-left: 50px;
-  left: 350px;
   background: rgba(254, 255, 223, 0.9);
   mix-blend-mode: normal;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.cart {
+/* .cart {
   position: absolute;
-  /* width: 500px; */
+  width: 500px;
   top: 100px;
   left: 600px;
-}
+} */
 .WrapperList {
   width: 90%;
 }
@@ -62,7 +59,7 @@ label.itemsDet {
   font-family: "Outfit";
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 12px;
   line-height: 16px;
   color: black;
   text-align: center;
@@ -70,6 +67,13 @@ label.itemsDet {
   justify-content: center;
   margin-right: 10px;
   margin-left: 10px;
+}
+p.itemsTxt {
+  font-family: "Outfit";
+  color: black;
+  margin-top: 5px;
+  font-weight: 500;
+  font-size: px;
 }
 label.amount {
   font-family: "Outfit";

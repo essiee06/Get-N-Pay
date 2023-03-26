@@ -17,6 +17,7 @@ const Login = () => {
               placeholder="Email Address"
               id="email"
               name="email"
+              required
             />
             {/* <h2 htmlFor="password" class={styles.Password_login}>
               Password
@@ -28,6 +29,7 @@ const Login = () => {
               placeholder="********"
               id="password"
               name="password"
+              required
             />
             <Button type="submit" className={styles.submit_btn} href="/cart">
               Log In
